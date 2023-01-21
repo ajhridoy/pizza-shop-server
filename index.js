@@ -7,12 +7,15 @@ require('dotenv').config()
 
 const db = require('./db')
 const pizza = require('./models/pizzaModel')
+
 const pizzasRoute = require('./routes/pizzasRoute')
+const userRoute = require('./routes/userRoute')
 
 app.use(cors());
 app.use(express.json())
 
 app.use('/api/pizzas', pizzasRoute)
+app.use('/api/users', userRoute)
 
 // pass= LWAviYB3DHjMDurA
 // userName = PizzaShopDB
